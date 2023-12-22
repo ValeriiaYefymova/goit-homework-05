@@ -120,11 +120,11 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
 }
 .team-list {
-  background: #fff;
+  background: #ffffff;
 }
 .team-item {
 }
@@ -149,6 +149,8 @@ ol {
 /* ---------------------------------------------- */
 
 /*? --------------------PROJECT CARD-------------------------- */
+.project-img {
+}
 .project-card {
 }
 .project-title {
@@ -164,8 +166,7 @@ ol {
 }
 .project-item {
 }
-.project-img {
-}
+
 .project-subtitle {
   color: #2e2f42;
   font-family: Roboto;
@@ -190,7 +191,7 @@ ol {
 }
 .footer-link {
   color: #4d5ae5;
-  font-family: Raleway sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
