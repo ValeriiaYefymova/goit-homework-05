@@ -121,12 +121,11 @@ address {
 /*? ---------------------HERO---------------------- */
 
 .hero {
+  background-color: #2e2f42;
+  padding: 188px 0;
 }
 
 .hero-container {
-  background-color: #2e2f42;
-  margin: 0 auto;
-  padding: 188px 0;
 }
 .hero-title {
   color: #fff;
