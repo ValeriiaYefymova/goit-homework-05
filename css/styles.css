@@ -231,6 +231,7 @@ address {
   border: 1px solid #8e8f99;
   background-color: #f4f4fd;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 .features-subtitle {
   color: #2e2f42;
@@ -273,11 +274,12 @@ address {
 }
 .team-list {
   display: flex;
+  gap: 24px;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
 }
 .team-item {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #ffffff;
   font-weight: 500;
   font-size: 20px;
@@ -334,7 +336,7 @@ address {
   padding-bottom: 32px;
 }
 .icon-svg-team {
-  fill: #4d5ae5;
+  fill: #f4f4fd;
   max-width: 100%;
   max-height: 100%;
 }
@@ -414,9 +416,6 @@ address {
   position: relative;
   overflow: hidden;
 }
-.project-item:hover .cover-text {
-  transform: translateY(0%);
-}
 
 .cover-text {
   background: #4d5ae5;
@@ -437,6 +436,11 @@ address {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.project-item:hover .cover-text {
+  transform: translateY(0%);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 /* ---------------------------------------------- */
 
 /*? --------------------FOOTER-------------------------- */
@@ -445,6 +449,11 @@ address {
   padding: 100px 0;
 }
 .footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-par {
+  margin-right: 120px;
 }
 .footer-link {
   color: #4d5ae5;
@@ -462,14 +471,14 @@ address {
   color: #f4f4fd;
 }
 .footer-text {
+  display: flex;
+  gap: 120px;
   color: #f4f4fd;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 264px;
-  display: flex;
-  gap: 120px;
 }
 .footer-text-soc {
   color: #fff;
@@ -484,6 +493,8 @@ address {
   display: flex;
   align-items: baseline;
   margin-right: 120px;
+}
+.footer-div {
 }
 
 .footer-icon-list {
@@ -502,13 +513,12 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link-footer {
-  display: flex;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
   justify-content: center;
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
   background-color: #4d5ae5;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
