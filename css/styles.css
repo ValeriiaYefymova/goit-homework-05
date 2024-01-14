@@ -321,13 +321,14 @@ address {
 }
 .icon-list {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
   align-items: center;
 }
 .icon-list-team {
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-team {
   display: inline-block;
@@ -433,8 +434,6 @@ address {
   line-height: 24px;
   letter-spacing: 0.02em;
   cursor: pointer;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .project-item:hover .cover-text {
   transform: translateY(0%);
@@ -494,8 +493,6 @@ address {
   align-items: baseline;
   margin-right: 120px;
 }
-.footer-div {
-}
 
 .footer-icon-list {
   display: flex;
@@ -506,11 +503,11 @@ address {
   border-radius: 50%;
 }
 .icon-items-footer {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 40px;
   height: 40px;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link-footer {
   width: 40px;
@@ -528,7 +525,7 @@ address {
   background-color: #31d0aa;
 }
 .svg-link-footer {
-  fill: #4d5ae5;
+  fill: #f4f4fd;
   width: 24;
   height: 24;
 }
