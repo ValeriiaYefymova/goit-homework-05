@@ -57,9 +57,6 @@ address {
 }
 .header {
   border-bottom: 1px solid #e7e9fc;
-  background: #fff;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .navigation {
@@ -92,11 +89,27 @@ address {
   letter-spacing: 0.02em;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:hover,
 .nav-link:focus {
   color: #404bbf;
 }
+.current {
+  position: relative;
+  color: #404bbf;
+}
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+}
+
 .address {
   font-style: normal;
   margin-left: auto;
@@ -111,6 +124,7 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -123,6 +137,17 @@ address {
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-container {
@@ -130,7 +155,6 @@ address {
 .hero-title {
   color: #fff;
   text-align: center;
-  font-family: Roboto;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
@@ -158,7 +182,6 @@ address {
   border: none;
   border-radius: 4px;
   min-width: 169px;
-  margin-top: 48px;
 }
 .button:hover,
 .button:focus {
@@ -193,7 +216,17 @@ address {
 .features-item {
   width: calc((100% - 72px) / 4);
 }
-
+.icons {
+  display: flex;
+  align-items: center;
+  flex-shrink: O;
+  width: 264px;
+  height: 112px;
+  border: 1px solid #8e8f99;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  padding-left: 102px;
+}
 .features-subtitle {
   color: #2e2f42;
   font-size: 20px;
@@ -201,6 +234,7 @@ address {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  margin-top: 8px;
   flex-basis: ((100% - 3 * 24px) / 4);
 }
 .features-item-text {
@@ -209,7 +243,6 @@ address {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 24px;
 }
 /* ---------------------------------------------- */
 
@@ -243,16 +276,6 @@ address {
   padding: 32px 0;
 }
 
-.team-subtitle {
-  color: #2e2f42;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin-bottom: 8px;
-}
 .team-item {
   background-color: #ffffff;
   font-weight: 500;
@@ -262,17 +285,66 @@ address {
   border-radius: 0px 0px 4px 4px;
   width: calc((100% - 72px) / 4);
 }
+.team-subtitle {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
 
 .team-img {
   display: block;
 }
 .team-text {
   color: #434455;
+  text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 0 auto;
+}
+.icon-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.icon-list-team {
+  width: 40px;
+  height: 40px;
+}
+.icons-team {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.icon-svg-team {
+  fill: #4d5ae5;
+  max-width: 100%;
+  max-height: 100%;
+}
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-link:hover,
+.icon-link:focus {
+  background-color: #404bbf;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 /* ---------------------------------------------- */
 
@@ -288,7 +360,6 @@ address {
 }
 .project-title {
   color: #2e2f42;
-  font-family: Roboto;
   text-align: center;
   font-size: 36px;
   font-weight: 700;
@@ -315,7 +386,6 @@ address {
 
 .project-subtitle {
   color: #2e2f42;
-  font-family: Roboto;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -324,7 +394,6 @@ address {
 }
 .project-item-text {
   color: #434455;
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -356,10 +425,23 @@ address {
 }
 .footer-text {
   color: #f4f4fd;
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 264px;
+  display: flex;
+  gap: 120px;
+}
+.footer-icon-list {
+  display: flex;
+  gap: 16px;
+}
+.icon-link-footer {
+}
+.icon-link-footer:hover,
+.icon-link-footer:focus {
+  background-color: #31d0aa;
+}
+.svg-link-footer {
 }
