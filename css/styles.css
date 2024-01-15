@@ -490,11 +490,6 @@ address {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
-.footer-media-wrap {
-  display: flex;
-  align-items: baseline;
-  margin-right: 120px;
-}
 
 .footer-icon-list {
   display: flex;
