@@ -594,10 +594,11 @@ address {
   top: 0;
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms cubic-bezier, (0.4, 0, 0.2, 1);
   opacity: 0;
   visibility: hidden;
   position: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-open {
   opacity: 1;
@@ -665,7 +666,7 @@ address {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 .modal-field {
@@ -717,20 +718,30 @@ address {
   background-color: transparent;
   outline: transparent;
   color: #2e2f4266;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   margin-bottom: 26px;
   padding-left: 24px;
   resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text:focus {
   border-color: #4d5ae5;
 }
 
+.modal-check {
+  margin-bottom: 24px;
+}
+
 .check-text {
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.48px;
   display: flex;
   align-items: center;
@@ -751,7 +762,7 @@ address {
   height: 16px;
   stroke-width: 1px;
   stroke: (46, 47, 66, 0.4);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   border-radius: 2px;
   justify-content: center;
@@ -765,9 +776,7 @@ address {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.check-input:checked {
-  margin-bottom: 50px;
-}
+
 .check-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
@@ -780,13 +789,16 @@ address {
   background-color: #404bbf;
 }
 .btn-send {
+  display: block;
+  border: none;
   color: #fff;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.04em;
   width: 105px;
+  height: 56px;
   min-width: 169px;
   display: inline-flex;
   padding: 16px 32px;
