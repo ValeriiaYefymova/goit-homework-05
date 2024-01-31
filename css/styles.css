@@ -156,7 +156,7 @@ img {
 
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding: 72px 16px 72px 16px;
   /* max-width: 1440px; */
   max-width: 320px;
   width: 100%;
@@ -178,8 +178,29 @@ img {
   /* margin: 0 auto; */
   /* padding-top: 188px;
   padding-bottom: 188px; */
-  padding-top: 72px;
-  padding-bottom: 200px;
+  background-color: #2e2f42;
+  margin: 0 auto;
+  /* max-width: 1440px; */
+  max-width: 320px;
+  width: 100%;
+  height: 432px;
+  flex-shrink: 0;
+  /* background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg); */
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Dark-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* margin: 0 auto; */
+  /* padding-top: 188px;
+  padding-bottom: 188px; */
 }
 
 .hero-container {
@@ -206,6 +227,7 @@ img {
 
 .button {
   color: #fff;
+  padding: 16px 32px;
   font-size: 16px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -221,7 +243,7 @@ img {
   border: none;
   border-radius: 4px;
   min-width: 169px;
-  margin-top: 72px;
+  /* margin-top: 72px; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
@@ -252,10 +274,10 @@ img {
 .features-container {
   margin-bottom: 8px;
 }
-/* .features-list {
-  display: flex;
-  gap: 24px;
-} */
+.features-list {
+  /* display: flex;
+  gap: 24px; */
+}
 .features-item {
   /* width: calc((100% - 72px) / 4); */
 }
@@ -270,9 +292,14 @@ img {
   background-color: #f4f4fd;
   border-radius: 4px;
   margin-bottom: 8px; */
+  display: none;
 }
 .features-subtitle {
   color: #2e2f42;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -501,13 +528,18 @@ img {
 }
 .footer-container {
   /* display: flex; */
-  align-items: baseline;
+  /* align-items: baseline; */
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-par {
   /* margin-right: 120px; */
 }
 .footer-link {
   color: #4d5ae5;
+  text-align: center;
   font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -516,7 +548,6 @@ img {
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
-  margin-bottom: 16px;
 }
 .footer-link span {
   color: #f4f4fd;
@@ -524,6 +555,7 @@ img {
 .footer-text {
   /* display: flex;
   gap: 120px; */
+  text-align: center;
   color: #f4f4fd;
   font-size: 16px;
   font-weight: 400;
@@ -532,13 +564,18 @@ img {
   /* max-width: 264px; */
   max-width: 288px;
 }
+.footer-media-wrap {
+  margin-right: auto;
+}
 .footer-text-soc {
   color: #fff;
+  text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 0 auto;
   margin-bottom: 16px;
   padding-top: 72px;
 }
@@ -546,10 +583,12 @@ img {
 .footer-icon-list {
   display: flex;
   gap: 16px;
-  text-align: center;
+  /* text-align: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 50%; */
+  margin: 0 auto;
+  padding-left: 56px;
 }
 .icon-items-footer {
   width: 40px;
@@ -580,19 +619,25 @@ img {
 }
 .email-block {
   /* padding-left: 160px; */
+  display: flex;
+  flex-wrap: wrap;
 }
 .footer-email-text {
+  margin: 0 auto;
+  margin-top: 72px;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  padding-top: 72px;
+  /* padding-top: 72px;
+  padding-left: 122px; */
 }
 
 .footer-form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -601,13 +646,15 @@ img {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  width: 264px;
-  height: 40px;
+  /* width: 264px;
+  height: 40px; */
+  width: 288px;
   border-radius: 4px;
   border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
   background-color: transparent;
+  margin: 0 auto;
 }
 
 .email-icon {
@@ -629,12 +676,14 @@ img {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  min-width: 165px;
+  max-width: 165px;
   border-radius: 4px;
   background: #4d5ae5;
   border: none;
-  margin: 0 24px;
+  /* margin: 0 24px; */
+  motion: 0 auto;
+  margin-bottom: 96px;
+  margin-left: 77px;
   cursor: pointer;
 }
 
@@ -728,7 +777,6 @@ img {
 }
 .modal-input-wrap {
   position: relative;
-  margin-bottom: 8px;
 }
 .modal-input-comment {
   margin-bottom: 16px;
@@ -741,7 +789,6 @@ img {
   background-color: transparent;
   outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-bottom: 16px;
   padding-left: 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -776,7 +823,6 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  margin-bottom: 26px;
   padding: 8px 16px;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -855,7 +901,7 @@ img {
   padding: 16px 32px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin-left: 110px;
+  margin: 0 auto;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -945,6 +991,7 @@ img {
     color: #404bbf;
   }
   .hero {
+    /* padding: 112px 136px 136px 204px; */
     background-color: #2e2f42;
     width: 100%;
     max-width: 768px;
@@ -956,14 +1003,11 @@ img {
       ),
       url(../images/Dark-bg.jpg);
   }
+
   .hero-title {
-    color: #fff;
     text-align: center;
     font-size: 56px;
-    font-weight: 700;
     line-height: 1.07;
-    letter-spacing: 0.02em;
-    margin: 0 auto;
     max-width: 496px;
     margin-bottom: 36px;
   }
@@ -1007,7 +1051,6 @@ img {
   }
 
   .hero {
-    background-color: #2e2f42;
     padding: 188px 0;
     /* max-width: 1440px; */
     max-width: 1440px;
@@ -1018,13 +1061,20 @@ img {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/people-office.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     /* margin: 0 auto; */
     /* padding-top: 188px;
   padding-bottom: 188px; */
-    padding-top: 72px;
-    padding-bottom: 200px;
+  }
+  .hero-title {
+    padding: 188px 0;
+    padding-bottom: 292px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.01;
+    letter-spacing: 0.02em;
+    max-width: 496px;
+    margin-bottom: 48px;
   }
 }
