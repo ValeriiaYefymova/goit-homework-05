@@ -37,9 +37,15 @@ address {
   font-style: normal;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   width: 100%;
-  max-width: 1158px;
+  /* max-width: 1158px; */
+  max-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -54,6 +60,7 @@ address {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header {
   border-bottom: 1px solid #e7e9fc;
@@ -73,17 +80,19 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  /* margin-right: 76px; */
+  padding: 17px 0;
 }
 .logo-part {
   color: #2e2f42;
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
+  /* display: flex; */
+  display: none;
+  /* gap: 40px; */
 }
-.nav-link {
+/* .nav-link {
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -110,17 +119,18 @@ address {
   border-radius: 2px;
   height: 4px;
   width: 100%;
-}
+} */
 
 .address {
   font-style: normal;
   margin-left: auto;
+  display: none;
 }
 
-.adress-list {
+/* .adress-list {
   display: flex;
   gap: 40px;
-}
+} */
 .adress-link {
   color: #434455;
   font-size: 16px;
@@ -132,6 +142,14 @@ address {
 .adress-link:focus {
   color: #404bbf;
 }
+.open-menu-btn {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
 /* ------------------------------------------- */
 
 /*? ---------------------HERO---------------------- */
@@ -139,33 +157,51 @@ address {
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  max-width: 320px;
+  width: 100%;
+  height: 432px;
+  flex-shrink: 0;
+  /* background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg); */
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/Dark-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  /* margin: 0 auto; */
+  /* padding-top: 188px;
+  padding-bottom: 188px; */
+  padding-top: 72px;
+  padding-bottom: 200px;
 }
 
 .hero-container {
 }
 .hero-title {
   color: #fff;
-  text-align: center;
-  font-size: 56px;
+  /* text-align: center; */
+  /* font-size: 56px; */
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  width: 496px;
+  /* width: 496px; */
   margin: 0 auto;
-  max-width: 496px;
-  margin-bottom: 48px;
+  /* max-width: 496px; */
+  /* max-width: 288px; */
+  max-width: 216px;
+  padding-left: 16px;
+  padding-right: 16px;
+  /* margin-bottom: 48px; */
+  margin-bottom: 72px;
+  text-transform: capitalize;
 }
 
 .button {
@@ -185,6 +221,7 @@ address {
   border: none;
   border-radius: 4px;
   min-width: 169px;
+  margin-top: 72px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
@@ -209,21 +246,22 @@ address {
 }
 .features {
   background: #fff;
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
 }
 .features-container {
   margin-bottom: 8px;
 }
-.features-list {
+/* .features-list {
   display: flex;
   gap: 24px;
-}
+} */
 .features-item {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
 }
 .icons {
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center;
   justify-content: center;
   flex-shrink: O;
   width: 264px;
@@ -231,7 +269,7 @@ address {
   border: 1px solid #8e8f99;
   background-color: #f4f4fd;
   border-radius: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 8px; */
 }
 .features-subtitle {
   color: #2e2f42;
@@ -249,13 +287,15 @@ address {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-bottom: 72px;
 }
 /* ---------------------------------------------- */
 
 /*? --------------------TEAM CARD-------------------------- */
 .team-card {
-  background: #f4f4fd;
-  padding: 120px 0;
+  background-color: #f4f4fd;
+  /* padding: 120px 0; */
+  padding-top: 96px;
 }
 
 .team-container {
@@ -274,11 +314,13 @@ address {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
 }
 .team-item {
+  width: 100%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #ffffff;
   font-weight: 500;
@@ -286,9 +328,10 @@ address {
   display: block;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
   box-shadow: 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+  margin-bottom: 72px;
 }
 .team-name {
   padding: 32px 0;
@@ -308,6 +351,7 @@ address {
 
 .team-img {
   display: block;
+  margin: 0 auto;
 }
 .team-text {
   color: #434455;
@@ -366,7 +410,8 @@ address {
   display: block;
 }
 .project-card {
-  padding: 120px 0 120px 0;
+  /* padding: 120px 0 120px 0; */
+  padding-top: 96px;
 }
 .project-container {
 }
@@ -379,7 +424,8 @@ address {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 72px;
+  /* margin-bottom: 72px; */
+  margin-bottom: 48px;
 }
 .project-list {
   display: flex;
@@ -395,7 +441,8 @@ address {
 .project-item {
   display: block;
   position: relative;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  width: 100%;
 }
 
 .project-subtitle {
@@ -447,14 +494,17 @@ address {
 /*? --------------------FOOTER-------------------------- */
 .footer {
   background: #2e2f42;
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 98px 0;
+  max-width: 320px;
+  height: 664px;
 }
 .footer-container {
-  display: flex;
+  /* display: flex; */
   align-items: baseline;
 }
 .footer-par {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 .footer-link {
   color: #4d5ae5;
@@ -472,14 +522,15 @@ address {
   color: #f4f4fd;
 }
 .footer-text {
-  display: flex;
-  gap: 120px;
+  /* display: flex;
+  gap: 120px; */
   color: #f4f4fd;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 264px;
+  /* max-width: 264px; */
+  max-width: 288px;
 }
 .footer-text-soc {
   color: #fff;
@@ -489,6 +540,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  padding-top: 72px;
 }
 
 .footer-icon-list {
@@ -527,7 +579,7 @@ address {
   height: 24;
 }
 .email-block {
-  padding-left: 160px;
+  /* padding-left: 160px; */
 }
 .footer-email-text {
   margin-bottom: 16px;
@@ -536,6 +588,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  padding-top: 72px;
 }
 
 .footer-form {
@@ -805,4 +858,173 @@ address {
   margin-left: 110px;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*? --------------------MEDIA-------------------------- */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .team-container {
+    max-width: 600px;
+  }
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .project-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .project-card {
+    padding-top: 96px;
+  }
+  .project-title {
+    margin-bottom: 72px;
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+  .logo {
+    margin-right: 120px;
+  }
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+  .nav-link {
+    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #404bbf;
+  }
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+  }
+  .address {
+    display: block;
+  }
+  .adress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .adress-link {
+    color: #434455;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .adress-link:hover,
+  .adress-link:focus {
+    color: #404bbf;
+  }
+  .hero {
+    background-color: #2e2f42;
+    width: 100%;
+    max-width: 768px;
+    height: 436px;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg.jpg);
+  }
+  .hero-title {
+    color: #fff;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin: 0 auto;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+
+  .footer {
+  }
+}
+
+/*? --------------------DESKTOP----------------------- */
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .team-container {
+    max-width: 1158px;
+  }
+  .team-list {
+    gap: 24px;
+  }
+  .team-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .project-card {
+    padding-top: 120px;
+  }
+  .project-item {
+    width: calc((100% - 48px) / 3);
+  }
+  .logo {
+    margin-right: 60px;
+  }
+  .adress-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .adress-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .hero {
+    background-color: #2e2f42;
+    padding: 188px 0;
+    /* max-width: 1440px; */
+    max-width: 1440px;
+    height: 600px;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* margin: 0 auto; */
+    /* padding-top: 188px;
+  padding-bottom: 188px; */
+    padding-top: 72px;
+    padding-bottom: 200px;
+  }
 }
