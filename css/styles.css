@@ -150,6 +150,121 @@ img {
   border: none;
 }
 
+/*? --------------------MENU----------------------- */
+
+.mob-menu {
+  width: 320px;
+  height: 640px;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.menu-close-btn-mob {
+  display: block;
+  margin-left: auto;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  background-color: E7E9FC;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.address-mob {
+  font-style: normal;
+}
+.adress-list-mob {
+  color: slate;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  margin-left: auto;
+}
+.tel-link-mob {
+  color: #404bbf;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+}
+
+.adress-link-mob {
+  color: #434455;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.adress-item-link:not(:last-child) {
+  margin-bottom: 24px;
+}
+.adress-link-mob:hover,
+.adress-link-mob:focus {
+  color: #404bbf;
+}
+.svg-close {
+}
+.menu-list {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: ocean;
+  margin-top: 72px;
+}
+.menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.current {
+  color: #404bbf;
+}
+
+.icon-mob-list {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+}
+.icon-list-mob {
+  width: 40px;
+  height: 40px;
+}
+.icon-link-mob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-svg-mob {
+  fill: #f4f4fd;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* ------------------------------------------- */
 
 /*? ---------------------HERO---------------------- */
@@ -294,8 +409,7 @@ img {
 }
 .features-subtitle {
   display: flex;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
   color: #2e2f42;
   font-size: 36px;
   font-weight: 700;
@@ -533,7 +647,6 @@ img {
   margin-right: auto;
 }
 .footer-par {
-  /* margin-right: 120px; */
 }
 .footer-link {
   color: #4d5ae5;
@@ -545,9 +658,8 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   cursor: pointer;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  align-items: center;
 }
 .footer-link span {
   color: #f4f4fd;
@@ -555,7 +667,6 @@ img {
 .footer-text {
   /* display: flex;
   gap: 120px; */
-  text-align: center;
   color: #f4f4fd;
   font-size: 16px;
   font-weight: 400;
@@ -565,7 +676,7 @@ img {
   max-width: 288px;
 }
 .footer-media-wrap {
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 .footer-text-soc {
   color: #fff;
@@ -575,7 +686,6 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 0 auto;
   margin-bottom: 16px;
   padding-top: 72px;
 }
@@ -587,8 +697,7 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%; */
-  margin: 0 auto;
-  padding-left: 56px;
+  justify-content: center;
 }
 .icon-items-footer {
   width: 40px;
@@ -623,7 +732,7 @@ img {
   flex-wrap: wrap;
 }
 .footer-email-text {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-top: 72px;
   margin-bottom: 16px;
   font-weight: 500;
@@ -680,8 +789,6 @@ img {
   border-radius: 4px;
   background: #4d5ae5;
   border: none;
-  /* margin: 0 24px; */
-  motion: 0 auto;
   margin-bottom: 96px;
   margin-left: 77px;
   cursor: pointer;
@@ -915,6 +1022,10 @@ img {
   .container {
     max-width: 768px;
   }
+  .open-menu-btn,
+  .mob-menu {
+    display: none;
+  }
 
   .team-container {
     max-width: 600px;
@@ -1041,11 +1152,61 @@ img {
   .features-subtitle {
     /* margin-top: 8px; */
     flex-basis: ((100% - 3 * 24px) / 4);
+    text-align: left;
   }
 
   .modal {
-    max-width: 408px;
-    max-height: 584px;
+    max-width: 768px;
+  }
+  .footer {
+    max-width: 768px;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; */
+  }
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    gap: 72px 24px;
+    max-width: 530px;
+  }
+  .footer-par {
+    padding-left: 108px;
+  }
+  .footer-input {
+    width: 264px;
+  }
+  .footer-text {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+  }
+  .email-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer-media-wrap {
+    display: flex;
+    flex-direction: column;
+    /* align-content: flex-end; */
+  }
+  .footer-icon-list {
+  }
+  .footer-form {
+    display: flex;
+    gap: 24px;
+    /* justify-content: space-between; */
+  }
+  .footer-email {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-button {
+    margin-left: 24px;
+    display: flex;
+    justify-content: right;
   }
 }
 
@@ -1055,7 +1216,10 @@ img {
   .container {
     max-width: 1158px;
   }
-
+  .open-menu-btn,
+  .mob-menu {
+    display: none;
+  }
   .team-container {
     max-width: 1158px;
   }
@@ -1067,6 +1231,9 @@ img {
   }
   .project-card {
     padding-top: 120px;
+  }
+  .project-container {
+    max-width: 1128px;
   }
   .project-item {
     width: calc((100% - 48px) / 3);
@@ -1085,7 +1252,7 @@ img {
 
   .hero {
     padding: 188px 0;
-    /max-width: 1440px;
+    max-width: 1440px;
     height: 600px;
     flex-shrink: 0;
     background-image: linear-gradient(
@@ -1150,5 +1317,23 @@ img {
   }
 
   .modal {
+  }
+
+  .footer {
+    max-width: 1440px;
+    min-height: 312px;
+  }
+  .footer-container {
+  }
+  .footer-par {
+  }
+  .footer-media-wrap {
+    padding-left: 120px;
+  }
+  .email-block {
+    align-items: baseline;
+    padding-left: 80px;
+  }
+  .footer-button {
   }
 }
