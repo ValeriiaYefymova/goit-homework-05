@@ -732,7 +732,7 @@ img {
 }
 .email-block {
   /* padding-left: 160px; */
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
 }
 .footer-email-text {
@@ -959,9 +959,9 @@ img {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start; */
+  /* display: flex; */
+
+  /* align-items: flex-start; */
 }
 
 .check-icon {
@@ -1007,6 +1007,18 @@ img {
 .check-input:focus {
   background-color: #404bbf;
 }
+.policy-text {
+  display: flex;
+}
+.checkbox-span {
+  display: flex;
+  align-items: center;
+}
+.accept {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+}
 .btn-send {
   display: block;
   min-width: 169px;
@@ -1036,7 +1048,7 @@ img {
   .mob-menu {
     display: none;
   }
-/*? --------------------OUR TEAM-------------------------- */
+  /*? --------------------OUR TEAM-------------------------- */
   .team-container {
     max-width: 600px;
   }
@@ -1057,7 +1069,7 @@ img {
   .project-title {
     margin-bottom: 72px;
   }
-/*? --------------------MENU-------------------------- */
+  /*? --------------------MENU-------------------------- */
   .open-menu-btn {
     display: none;
   }
@@ -1141,15 +1153,24 @@ img {
         url(../images/tab-2x.jpg);
     }
   }
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
 
   .hero-title {
+    padding: 0;
     text-align: center;
     font-size: 56px;
     line-height: 1.07;
     max-width: 496px;
     letter-spacing: 0.02em;
+    margin-bottom: 39px;
   }
-/*? --------------------FEATURES-------------------------- */
+  .button {
+  }
+  /*? --------------------FEATURES-------------------------- */
   .features-container {
     max-width: 768px;
   }
@@ -1165,9 +1186,9 @@ img {
   .features-subtitle {
     /* margin-top: 8px; */
     flex-basis: ((100% - 3 * 24px) / 4);
-    text-align: left;
+    justify-content: left;
   }
-/*? --------------------MODAL-------------------------- */
+  /*? --------------------MODAL-------------------------- */
   .modal {
     max-width: 768px;
   }
@@ -1180,16 +1201,15 @@ img {
   .footer-container {
     /* max-width: 768px;
     max-height: 261px; */
-   display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
     /* row-gap: 72px; */
-    column-gap: 24px; 
+    column-gap: 24px;
     padding-left: 108px;
   }
-  .footer-link{
-    
+  .footer-link {
   }
   .footer-par {
     display: flex;
@@ -1207,37 +1227,23 @@ img {
   .email-block {
     display: flex;
     flex-direction: column;
-    /* display: flex;
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    /* justify-content: space-between; */ */
   }
   .footer-media-wrap {
     display: flex;
     flex-direction: column;
     align-items: last baseline;
-}
+  }
   .footer-icon-list {
-  } 
-   .footer-form {
+  }
+  .footer-form {
     flex-direction: row;
     gap: 16px;
- } 
- .footer-email-text{
-  justify-content: start;
- }
-  /* .footer-email {
-    display: flex;
-    justify-content: space-between;
-  } */
-
-  /* .footer-button {
-    margin-left: 24px;
-    display: flex;
-    justify-content: right;
-  } */
-  .footer-button{
-  
+  }
+  .footer-email-text {
+    justify-content: start;
+  }
+  .footer-button {
+    margin: 0;
   }
 }
 
@@ -1317,7 +1323,7 @@ img {
     line-height: 1.07;
     letter-spacing: 0.02em;
   }
-/*? --------------------FEATURES-------------------------- */
+  /*? --------------------FEATURES-------------------------- */
   .features-list {
     display: flex;
     gap: 24px;
@@ -1350,27 +1356,34 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
-/*? --------------------MODAL-------------------------- */
-  .modal {
+  /*? --------------------MODAL-------------------------- */
+  .backdrop {
   }
-/*? --------------------FOOTER-------------------------- */
+  .modal {
+    max-width: 584px;
+    max-height: 408px;
+  }
+  /*? --------------------FOOTER-------------------------- */
   .footer {
     /* max-width: 1440px;
     height: 100%; */
   }
   .footer-container {
-   display: flex; 
+    display: flex;
     flex-wrap: nowrap;
     padding-left: 15px;
   }
   .footer-par {
-    
+  }
+  .footer-text {
+    width: 264px;
   }
   .footer-form {
     gap: 16px;
   }
   .footer-media-wrap {
     margin-right: 80px;
+    margin-left: 120px;
   }
   .email-block {
     /* align-items: baseline;
