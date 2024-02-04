@@ -240,7 +240,7 @@ img {
 
 .icon-mob-list {
   display: flex;
-  gap: 48px;
+  gap: 40px;
   justify-content: center;
   align-items: center;
 }
