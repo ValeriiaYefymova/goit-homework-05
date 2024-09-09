@@ -453,7 +453,7 @@ img {
   justify-content: center;
 }
 .team-item {
-  width: 264px%;
+  width: 264px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #ffffff;
   font-weight: 500;
@@ -810,11 +810,20 @@ img {
   position: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: none; /* Модальное окно и фон скрыты */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Слой выше всего остального контента */
 }
 .is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+/* Когда модальное окно открыто */
+.backdrop.is-visible {
+  display: flex; /* Показываем модальное окно и backdrop */
 }
 .modal {
   position: absolute;
@@ -831,6 +840,7 @@ img {
   padding: 72px 24px 24px 24px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
 }
 .modal-close-btn {
   position: absolute;
@@ -1186,6 +1196,7 @@ img {
   .modal {
     max-width: 768px;
   }
+ 
   /*? --------------------FOOTER------------------------- */
   .footer {
     /* max-width: 768px;
