@@ -20,3 +20,50 @@ modalBackdrop.addEventListener('click', function (event) {
     modalBackdrop.classList.remove('is-visible');
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const openMenuBtn = document.querySelector('.open-menu-btn'); // Иконка (три полоски)
+    const closeMenuBtn = document.querySelector('.menu-close-btn-mob'); // Кнопка закрытия в меню
+    const mobMenu = document.querySelector('.mob-menu'); // Мобильное меню
+  
+    // Открытие меню
+    openMenuBtn.addEventListener('click', function() {
+      mobMenu.classList.add('is-open'); // Добавляем класс для показа меню
+    });
+  
+    // Закрытие меню
+    closeMenuBtn.addEventListener('click', function() {
+      mobMenu.classList.remove('is-open'); // Убираем класс для скрытия меню
+    });
+  
+    // Закрытие меню при клике вне его области
+    mobMenu.addEventListener('click', function(event) {
+      if (event.target === mobMenu) {
+        mobMenu.classList.remove('is-open');
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const openMenuBtn = document.querySelector('.open-menu-btn');
+    const closeMenuBtn = document.querySelector('.menu-close-btn-mob');
+    const mobMenu = document.querySelector('.mob-menu');
+    const menuLinks = document.querySelectorAll('.menu-item a'); // Ссылки в меню
+  
+    // Открытие меню
+    openMenuBtn.addEventListener('click', function() {
+      mobMenu.classList.add('is-open');
+    });
+  
+    // Закрытие меню
+    closeMenuBtn.addEventListener('click', function() {
+      mobMenu.classList.remove('is-open');
+    });
+  
+    // Закрытие меню при клике на любую ссылку
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobMenu.classList.remove('is-open');
+      });
+    });
+  });
